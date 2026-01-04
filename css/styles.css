@@ -66,7 +66,29 @@ address {
 }
 
 ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .container {
@@ -77,7 +99,7 @@ ul {
 }
 
 .section {
-    padding: 48px 0;
+    margin: 96px 0;
 }
 
 .visually-hidden {
@@ -107,13 +129,13 @@ ul {
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
+    font-weight: 600;
 }
 
 
 
 .link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
 }
 
 .hero-section {
@@ -136,9 +158,14 @@ h2 .accent {
     color: var(--color-brand-dark);
 }
 
+.advantages-section {
+    background-color: var(--color-brand-light)
+}
+
 .advantages-list {
-    color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 /*.advantages-list li {
@@ -148,12 +175,21 @@ h2 .accent {
 }*/
 
 .advantages-item {
+    padding: 16px 0;
+    color: var(--color-primary-light);
     font-size: 20px;
     font-weight: 300;
 }
 
-.traditions-section {
-    padding-top: 96px;
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.traditions-content {
+    max-width: 710px;
+    margin-right: 100px;
 }
 
 .traditions-title {
@@ -184,6 +220,15 @@ h2 .accent {
     text-transform: uppercase;
 }
 
+.traditions-text.limited {
+    max-width: 340px;
+    margin-bottom: 0;
+}
+
+.traditions-text.limited:last-child {
+    margin-bottom: 18px;
+}
+
 .section-title {
     font-size: 64px;
     font-weight: 900;
@@ -194,8 +239,24 @@ h2 .accent {
     color: var(--color-brand-dark);
 }
 
+.formats-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+
 .formats-title {
     margin-bottom: 80px;
+}
+
+.format-card {
+    border: 1px solid lightgrey;
+    border-radius: 16px;
+    padding: 24px;
 }
 
 .format-title {
